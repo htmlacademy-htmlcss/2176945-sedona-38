@@ -1,6 +1,6 @@
 /*Глобальные стили*/
 
-/*Переменные*/
+  /*Переменные*/
   :root {
     --hotel-card-margin: 10px; /*Внешние оступы между карточками в каталоге*/
     --card-in-grid-amount: 3; /*Количество карточек товара в каталоге. Значением указывать только целое число. Изменяя значение можно быстро менять количество карточек в каталоге в ряду.*/
@@ -19,6 +19,12 @@
 
   a {
     text-decoration: none;
+    white-space: nowrap;
+  }
+
+  button {
+    cursor: pointer;
+    white-space: nowrap;
   }
 
   hr.widescreen-delimiter {
@@ -32,6 +38,48 @@
 /*Стили шапки*/
   header {
     padding: 0px 70px;
+  }
+
+/*Стили блоков главной страницы*/
+
+  /*Стили баннера*/
+    .site-banner {
+      background-image: url(/img/sedona-main-banner.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+  /*Контейнер для текстовых блоков*/
+  .standart-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    box-sizing: border-box;
+  }
+
+  /*Заголовок 2 уровня в текстовых блоках*/
+  h2.standart-text-block-header {
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  /*Обычный текст в текстовых блоках*/
+  p.standart-text-block-text {
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 118.182% */
   }
 
 /*Стили подвала*/
@@ -58,6 +106,7 @@
 
 /*Обшие стили для всех кнопок*/
   .button {
+    cursor: pointer;
     display: flex;
     border: none;
     width: max-content;
@@ -72,36 +121,61 @@
     text-transform: uppercase;
   }
 
+  /*Коричневая кнопка*/
   .button-brown {
     background-color: var(--button-brown-color);
     border-radius: 4px;
     padding: var(--common-button-padding);
   }
 
+  /*Зеленая кнопка*/
   .button-green {
     background-color: var(--button-green-color);
     border-radius: 4px;
     padding: var(--common-button-padding);
   }
 
+  /*Голубая кнопка*/
   .button-blue {
     background-color: var(--button-blue-color);
     border-radius: 4px;
     padding: var(--common-button-padding);
   }
 
+  /*Кнопка "Подробнее"*/
   .button-more-details {
     width: calc((100% - 10px) / 2);
     padding: var(--common-button-padding);
-
   }
 
+  /*Кнопка "Добавить в избранное"*/
   .button-favorites {
     width: calc((100% - 10px) / 2);
     padding: var(--common-button-padding);
   }
 
-/*Кнопки пагинации*/
+  /*Кнопки пагинации*/
+
+  /*Контейнер-список для кнопок*/
+  ul.catalog-pagination {
+    display: flex;
+    list-style-type: none;
+  }
+
+  /*Элемент контейнера-списка для кнопок*/
+  li.pagination-item {
+    margin: 0px 4px;
+  }
+
+  /*Убираем отступ слева у кнопки первой страницы*/
+  li.pagination-item:first-child {
+    margin: 0px 4px 0px 0px;
+  }
+
+  /*Убираем отступ справа у кнопки последней страницы*/
+  li.pagination-item:last-child {
+    margin: 0px 0px 0px 4px;
+  }
 
   /*Кнопка номера страницы*/
   .pagination-button {
@@ -128,34 +202,6 @@
   .pagination-dots {
     background: white;
     color: black;
-  }
-
-  /*Контейнер-список для кнопок*/
-  ul.catalog-pagination {
-    display: flex;
-    list-style-type: none;
-  }
-
-  /*Элемент контейнера-списка для кнопок*/
-  li.pagination-item {
-    margin: 0px 4px;
-  }
-
-  /*Убираем отступ слева у кнопки первой страницы*/
-  li.pagination-item:first-child {
-    margin: 0px 4px 0px 0px;
-  }
-
-  /*Убираем отступ справа у кнопки последней страницы*/
-  li.pagination-item:last-child {
-    margin: 0px 0px 0px 4px;
-  }
-
-/**/
-  .hotel-card-button-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
 /*Блок подписаться*/
@@ -199,41 +245,6 @@
     background: transparent;
   }
 
-/*Стили главной страницы*/
-
-  /*Контейнер для текстовых блоков*/
-  .standart-text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 0px;
-    box-sizing: border-box;
-  }
-
-  /*Заголовок 2 уровня в текстовых блоках*/
-  h2.standart-text-block-header {
-    font-family: var(--main-font-family);
-    color: var(--main-font-color);
-    text-align: center;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    text-transform: uppercase;
-  }
-
-  /*Обычный текст в текстовых блоках*/
-  p.standart-text-block-text {
-    font-family: var(--main-font-family);
-    color: var(--main-font-color);
-    text-align: center;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 118.182% */
-  }
-
 /*Стили каталога*/
 
   .catalog-filter {
@@ -263,4 +274,11 @@
     box-sizing: border-box;
     list-style-type: none;
     width: calc((100% - ((var(--hotel-card-margin) * 2) * var(--card-in-grid-amount))) / var(--card-in-grid-amount));
+  }
+
+  /*Контейнер для кнопок "Подробнее" и "В избранное"*/
+  .hotel-card-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
