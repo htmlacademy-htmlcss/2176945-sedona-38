@@ -124,9 +124,14 @@ a.nav-link {
 }
 
 /*Выравниваем декоративную иконку под баннером*/
-#bottom-border {
+.bottom-border {
+  background-image: url(../images/banner-bottom-border.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   bottom: 0;
+  width: 100vw;
+  height: calc(100vw * 0.0475);
 }
 
 /*Контейнер для текстовых блоков*/
@@ -343,12 +348,7 @@ p.hotel-search-paragraph {
 
 /*Контейнер блока*/
 .subscribe-block {
-  background-image: url(../images/subscribe-block-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 100px 250px;
-  color: #ffffff;
-  background-color: black;
 }
 
 /*Форма отправки емейла*/
@@ -358,12 +358,20 @@ form.newsletter_subscribe {
 
 /*Заголовок блока*/
 h2.subscribe-block-title {
-  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 /*Текст блока*/
 p.subscribe-block-text {
-  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
   margin-bottom: 55px;
 }
 
@@ -640,3 +648,5 @@ li.pagination-item:last-child {
   background: white;
   color: black;
 }
+
+/*Глобальные стили*/
