@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+      content="Мой первый сайт-проект в рамках курса 'HTML и CSS. Профессиональная вёрстка сайтов'">
+    <title>Страница с модальным окном в личном проекте «Седона»</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+  </head>
+
+  <body>
+    <!--Модальное окно-->
+    <div class="modal-container modal-container-close">
+      <div class="modal-window-hotel-search" data-test="modal">
+        <h2 class="form-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-window-close" type="button">
+          <span class="visually-hidden">Кнопка закрытия модального окна.</span>
+          <svg class="window-close-ico" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+            <path
+              d="M14.3928 1.29231L13.1005 0L7.39282 5.70769L1.68513 0L0.392822 1.29231L6.10051 7L0.392822 12.7077L1.68513 14L7.39282 8.29231L13.1005 14L14.3928 12.7077L8.68513 7L14.3928 1.29231Z" />
+          </svg>
+        </button>
+        <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="arrival-date" for="arrival-date-value-input">Дата заезда:</label>
+          <input type="date" class="arrival-date-value" id="arrival-date-value-input" min="2023-11-15" value="2023-11-15">
+          <p class="error-message message-red">Мы не можем отправить вас в прошлое.</p>
+          <label class="departure-date" for="departure-date-value-input">Дата выезда:</label>
+          <input type="date" class="departure-date-value" id="departure-date-value-input" value="2021-09-01">
+          <p class="error-message message-black">На эти даты есть свободные номера. Пока есть.</p>
+          <label class="adults-amount" for="adult-quantity">Взрослые:</label>
+          <div class="adult-quantity_inner">
+            <button class="bt_minus" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2" viewBox="0 0 15 2">
+                <path d="M0.392822 0L0.392822 2L14.3928 2V0L0.392822 0Z" />
+              </svg>
+            </button>
+            <input type="text" id="adult-quantity" value="2" data-max-count="99">
+            <button class="bt_plus" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+              </svg>
+            </button>
+          </div>
+          <label class="kids-amount" for="kids-quantity">Дети:</label>
+          <div class="tooltip-toogle" aria-labelledby="tooltip-label-date">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
+            </svg>
+            <div class="tooltiptext" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</div>
+          </div>
+          <div class="kids-quantity_inner">
+            <button class="bt_minus" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2" viewBox="0 0 15 2">
+                <path d="M0.392822 0L0.392822 2L14.3928 2V0L0.392822 0Z" />
+              </svg>
+            </button>
+            <input type="text" id="kids-quantity" value="2" data-max-count="99">
+            <button class="bt_plus" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+              </svg>
+            </button>
+          </div>
+          <button class="button button-blue find-hotel" type="button">найти</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
