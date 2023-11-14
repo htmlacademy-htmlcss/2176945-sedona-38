@@ -21,7 +21,6 @@
 
 /*Переменные*/
 :root {
-  --main-font-family: 'PT Sans', sans-serif; /*Основной шрифт сайта*/
   --common-border-radius: 4px; /*Основой радиус скругления границ элементов сайта*/
   --white-opacity: rgba(255, 255, 255, 0.3); /*Белый цвет с прозрачностью 30%*/
   --main-black-color: #000; /*Основной черный цвет для элементов*/
@@ -147,7 +146,7 @@ p.standart-text-block-text {
 
 /*=============== КНОПКИ ================*/
 
-/*Обшие стили для всех кнопок*/
+/*Общие стили для всех кнопок*/
 .button {
   padding: 8px 0;
   display: flex;
@@ -210,6 +209,11 @@ button {
 /*Голубая кнопка при наведении и фокусе*/
 .button-blue:hover, .button-blue:focus {
   background-color: var(--button-blue-second-color);
+}
+
+/*Стили у деактивированных кнопок*/
+.button-blue:disabled, .button-green:disabled, .button-brown:disabled {
+  background-color: #E5E5E5;
 }
 
 /*Кнопка "Подробнее"*/
@@ -1432,6 +1436,7 @@ li.pagination-item:last-child {
 /*Кнопка номера страницы при наведении и фокусе*/
 .pagination-button:hover, .pagination-button:focus {
   background-color: var(--button-blue-second-color);
+  outline: 1px solid var(--button-blue-main-color);
 }
 
 /*Кнопка номера страницы при нажатии*/
@@ -1448,6 +1453,7 @@ li.pagination-item:last-child {
   font-size: 20px;
   width: 36px;
   height: 36px;
+  outline: none;
 }
 
 /*"Кнопка-точка"*/
@@ -1458,6 +1464,7 @@ li.pagination-item:last-child {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  outline: none;
 }
 
 /*============  Модальное окно =================*/
