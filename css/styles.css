@@ -27,12 +27,14 @@
   --main-black-color: #000; /*Основной черный цвет для элементов*/
   --main-dark-color: #333; /*Темный цвет для элементов*/
   --main-gray-color: #F2F2F2; /*Основной серый цвет*/
+  --second-gray-color: #E6E6E6; /*Дополнительный сервый цвет*/
   --button-main-font-size: 16px; /*Размер шрифта кнопок основных*/
   --main-white-color: #ffffff; /*Цвет текста основных кнопок*/
   --main-brown-color: #756157; /*Цвет коричневой кнопки*/
   --button-green-color: #7DB54F; /*Цвет зеленой кнопки*/
   --button-blue-main-color: #82B3D3; /*Цвет голубой кнопки основной*/
   --button-blue-second-color: #68A2CA; /*Цвет голубой кнопки дополнительный*/
+  --blue-outline: 3px solid #83B3D3;
   --input-color: #3F5E72; /*Цвет флажков в чекбоксах и радиокнопках*/
   --error-text-color: #FF5757; /*Цвет текста об ошибке*/
 }
@@ -171,6 +173,10 @@ p.standart-text-block-text {
   line-height: 20px;
   text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -949,6 +955,18 @@ label.price-from input, label.price-to input {
   width: 100%;
   box-sizing: border-box;
   padding: 0;
+  background: transparent;
+}
+
+/*Поля ввода цен при наведении*/
+label.price-from:hover, label.price-to:hover {
+  background-color: var(--second-gray-color);
+}
+
+/*Поля ввода цен при фокусе*/
+label.price-from:focus, label.price-to:focus {
+  background-color: var(--second-gray-color);
+  outline: var(--blue-outline);
 }
 
 /*Поле ввода минимальной цены*/
@@ -1055,7 +1073,7 @@ button.button-reset:hover {
 /*Кнопка сброса фильтров при фокусе*/
 button.button-reset:focus, button.button-reset:focus-visible {
   border-radius: var(--common-border-radius);
-  outline: 3px solid #83B3D3;
+  outline: var(--blue-outline);
 }
 
 /*Кнопка сброса фильтров при фокусе*/
@@ -1143,7 +1161,7 @@ li.catalog-filter-item input[type="radio" i]:checked {
 
 /*добавляем чекбоксам и радиокнопкам рамку при фокусе*/
 li.catalog-filter-item:focus input[type="checkbox" i], li.catalog-filter-item:focus input[type="radio" i], li.catalog-filter-item:focus-visible input[type="checkbox" i], li.catalog-filter-item:focus-visible input[type="radio" i]  {
-  outline: 3px solid #83B3D3;
+  outline: var(--blue-outline);
 }
 
 /**/
@@ -1255,7 +1273,7 @@ button.button-appearance-change:focus, button.button-appearance-change:focus-vis
 section.hotel-card {
   margin: 0 auto 40px auto;
   padding-bottom: 40px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid var(--second-gray-color);
 }
 
 /*Список элементов*/
@@ -1271,7 +1289,7 @@ ul.hotel-card-list {
 li.hotel-card-list-item {
   display: block;
   border-radius: var(--common-border-radius);
-  border: 1px solid #E6E6E6;
+  border: 1px solid var(--second-gray-color);
   padding: 20px;
   box-sizing: border-box;
   list-style-type: none;
@@ -1451,7 +1469,7 @@ li.pagination-item:last-child {
   position: fixed;
   top: 0;
   left: 0;
-  display: none; /*Должно быть flex*/
+  display: flex; /*Должно быть flex*/
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -1480,6 +1498,9 @@ li.pagination-item:last-child {
 
 /*Кнопка закрытия модального окна*/
 button.modal-window-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 52px;
   height: 52px;
   background-color: var(--main-gray-color);
@@ -1489,9 +1510,36 @@ button.modal-window-close {
   right: 49px;
   border: none;
   padding-inline: 0;
-  background-image: url(../images/close-button.svg);
   background-repeat: no-repeat;
   background-position: center center;
+  padding-block: 0;
+}
+
+/*Красим иконку крестик в кнопке закрытия*/
+button.modal-window-close svg.window-close-ico {
+  fill: #000;
+}
+
+/*Красим иконку крестик в кнопке закрытия*/
+button.modal-window-close:active svg.window-close-ico {
+  fill: #000;
+  opacity: 0.3;
+}
+
+/*Кнопка закрытия модального окна при наведении*/
+button.modal-window-close:hover {
+  background-color: var(--second-gray-color);
+}
+
+/*Кнопка закрытия модального окна при фокусе*/
+button.modal-window-close:focus, button.modal-window-close:focus-visible {
+  background-color: var(--second-gray-color);
+  outline: var(--blue-outline);
+}
+
+/*Кнопка закрытия модального окна при нажатии*/
+button.modal-window-close:active {
+  background-color: var(--second-gray-color);
 }
 
 /*Заголовок окна*/
@@ -1556,8 +1604,20 @@ button.find-hotel {
 }
 
 /*Растягиваем input с датами на нужную ширину*/
-.hotel-search-form input[type="date"] {
+input.arrival-date-value, input.departure-date-value {
   grid-column: 2 / 6;
+}
+
+/*Заменяем иконку календаря*/
+.hotel-search-form input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.3;
+  display: block;
+  background: url(../images/calendar.svg) no-repeat;
+  background-position: center center;
+  width: 16px;
+  height: 15px;
+  border-width: thin;
 }
 
 /*input ввода даты прибытия*/
@@ -1597,8 +1657,8 @@ button.find-hotel {
 
 /*Стилизуем кнопки плюс-минус в форме*/
 .bt_minus, .bt_plus {
-  font-size: 20px;
-  color: rgba(117, 97, 87, 0.3);
+  display: flex;
+  align-items: center;
   border: none;
   appearance: none;
   background-color: transparent;
@@ -1606,9 +1666,36 @@ button.find-hotel {
   box-sizing: border-box;
 }
 
+/*Красим иконки плюс-минус */
+.bt_minus svg, .bt_plus svg {
+  fill: rgba(117, 97, 87, 0.3);
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+}
+
+/*Красим иконки плюс-минус при наведении*/
+.bt_minus:hover svg, .bt_plus:hover svg {
+  fill: #000;
+}
+
+/*Красим иконки плюс-минус при наведении*/
+.bt_minus:focus svg, .bt_plus:focus svg {
+  fill: #000;
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+/*Красим иконки плюс-минус при наведении*/
+.bt_minus:active svg, .bt_plus:active svg {
+  fill: #000;
+  opacity: 0.1;
+}
+
 /*Иконка подсказки*/
 button.tooltip-toogle {
   appearance: none;
+  border: none;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -1637,6 +1724,7 @@ button.tooltip-toogle .tooltiptext {
   font-weight: 400;
   line-height: 20px;
   text-transform: none;
+  text-align: left;
   /*Расположение*/
   padding: 15px 18px 18px 22px;
   box-sizing: border-box;
