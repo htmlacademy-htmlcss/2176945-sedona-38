@@ -8,15 +8,15 @@
       content="Мой первый сайт-проект в рамках курса 'HTML и CSS. Профессиональная вёрстка сайтов'">
     <title>Каталог гостиниц</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./favicon.png">
   </head>
 
   <body>
     <div class="page-wrapper">
       <!--Шапка-->
       <header class="sedona-header" data-test="header">
-        <a href="/">
+        <a href="index.html">
           <img class="sedona-header-logo" src="images/sedona-logo.svg" alt="Логотип сайта города Седона" width="140"
             height="70">
         </a>
@@ -63,7 +63,7 @@
               <li class="start-page-button">
                 <a href="index.html">
                   <span class="visually-hidden">Вернуться на главную страницу.</span>
-                  <svg class="start-page-button" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                  <svg class="start-page-button" role="img" width="13" height="12" viewBox="0 0 13 12" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g>
                       <path
@@ -129,11 +129,10 @@
                 <div class="range-slider">
                   <h3 class="visually-hidden">Фильтр по стоимости.</h3>
                   <label class="price-from" for="price-from">
-                    <input id="price-from" type="text" value="0">от
+                    <input id="price-from" type="text" value="0">
                   </label>
                   <label class="price-to" for="price-to">
                     <input id="price-to" type="text" value="9000">
-                    до
                   </label>
                   <div class="range-scale">
                     <div class="line-full-range"></div>
@@ -167,15 +166,15 @@
               <option value="popular">Сначала популярные</option>
             </select>
             <div class="appearance-change-button">
-              <button class="button-appearance-change tile" type="button">
+              <a class="button-appearance-change tile" href="#">
                 <span class="visually-hidden">Показать плиткой.</span>
-              </button>
-              <button class="button-appearance-change one-in-line" type="button">
+              </a>
+              <a class="button-appearance-change one-in-line"  href="#">
                 <span class="visually-hidden">Отобразить по 1 карточке в строке.</span>
-              </button>
-              <button class="button-appearance-change list" type="button">
+              </a>
+              <a class="button-appearance-change list" href="#">
                 <span class="visually-hidden">Показать списком.</span>
-              </button>
+              </a>
             </div>
           </section>
           <!--Список гостиниц-->
@@ -183,7 +182,7 @@
             <ul class="hotel-card-list">
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/Amara-Resort-Spa-resize.jpg" alt="Amara Resort & Spa" width="300" height="210">
+                  <img class="hotel-card-image" src="images/amara-resort-spa-resize.jpg" alt="Amara Resort & Spa" width="300" height="210">
                   <h3 class="hotel-name">Amara Resort & Spa</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -202,7 +201,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/Villas-at-Poco-Diablo-resize.jpg" alt="Villas at Poco Diablo" width="300" height="210">
+                  <img class="hotel-card-image" src="images/villas-at-poco-diablo-resize.jpg" alt="Villas at Poco Diablo" width="300" height="210">
                   <h3 class="hotel-name">Villas at Poco Diablo</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -221,7 +220,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/Desert-Quail-Inn-resize.jpg" alt="Desert Quail Inn" width="300" height="210">
+                  <img class="hotel-card-image" src="images/desert-quail-inn-resize.jpg" alt="Desert Quail Inn" width="300" height="210">
                   <h3 class="hotel-name">Desert Quail Inn</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -239,7 +238,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/GreenTree-Inn-resize.jpg" alt="GreenTree Inn" width="300" height="210">
+                  <img class="hotel-card-image" src="images/greentree-inn-resize.jpg" alt="GreenTree Inn" width="300" height="210">
                   <h3 class="hotel-name">GreenTree Inn</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -306,7 +305,7 @@
           <ul class="social-list">
             <li class="social-list-item">
               <a href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Ссылка на группу Вконтакте.</span>
+                <h4 class="visually-hidden">Ссылка на группу Вконтакте.</h4>
                 <svg class="footer-social-ico" aria-hidden="true" focusable="false" width="25" height="15"
                   viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -318,7 +317,7 @@
             </li>
             <li class="social-list-item">
               <a href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Ссылка на канал в Telegram.</span>
+                <h4 class="visually-hidden">Ссылка на канал в Telegram.</h4>
                 <svg class="footer-social-ico" aria-hidden="true" focusable="false" width="18" height="17"
                   viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -330,7 +329,7 @@
             </li>
             <li class="social-list-item">
               <a href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Ссылка на канал YouTube.</span>
+                <h4 class="visually-hidden">Ссылка на канал YouTube.</h4>
                 <svg class="footer-social-ico" aria-hidden="true" focusable="false" width="23" height="18"
                   viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -344,7 +343,7 @@
         </section>
         <section class="footer-contact-number">
           <h3 class="visually-hidden">Телефонный номер для связи.</h3>
-          <a class="contact-phone" href="tel:+7-(812)-812-12-12">+7 (812) 812-12-12</a>
+          <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
         <section class="footer-logo">
           <h3 class="visually-hidden">Ссылка на сайт HTML Academy.</h3>
