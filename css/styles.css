@@ -3,7 +3,7 @@
 /*Шрифты*/
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@ html {
 
 /*Обертка для страниц сайта*/
 .page-wrapper {
-  background-color: #ffffff;
+  background-color: var(--main-white-color);
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -55,49 +55,10 @@ body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: var(--main-dark-color);
   background-color: var(--main-gray-color);
   font-size: 16px;
-  line-height: 24px;
-}
-
-/*Общие стили для всех ссылок*/
-a {
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  font-style: normal;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  font-style: normal;
-}
-
-p {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-input {
-  font-family: inherit;
-  background-color: var(--main-gray-color);
-  padding: 12px 20px;
-  border: none;
-  color: var(--main-black-color);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 24px;
 }
 
@@ -129,10 +90,14 @@ input {
 
 /*Заголовок 2 уровня в текстовых блоках*/
 h2.standart-text-block-header {
-  color: var(--main-dark-color);
+  color: var(--main-black-color);
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 20px 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-style: normal;
 }
 
 /*Обычный текст в текстовых блоках*/
@@ -142,6 +107,8 @@ p.standart-text-block-text {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /*=============== КНОПКИ ================*/
@@ -159,6 +126,7 @@ p.standart-text-block-text {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   width: min-content;
@@ -292,8 +260,8 @@ span.favorites-amount {
   font-weight: 400;
   line-height: 10px;
   position: absolute;
-  top: 20%;
-  right: 0;
+  top: 11px;
+  right: 4px;
 }
 
 /*============ ШАПКА ==============*/
@@ -378,6 +346,7 @@ a.nav-link {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border-bottom: 2px solid transparent;
+  text-decoration: none;
 }
 
 a.nav-link:hover {
@@ -390,7 +359,7 @@ a.nav-link:hover {
 .site-banner {
   background-image: url(../images/sedona-main-banner.png);
   background-size: cover;
-  background-color: var(--main-dark-color);
+  background-color: #2e79b7;
   position: relative;
   padding: 51px 0 82px 0;
   box-sizing: border-box;
@@ -398,6 +367,8 @@ a.nav-link:hover {
   -webkit-box-sizing: border-box;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -422,6 +393,10 @@ a.nav-link:hover {
 /*Дополнительный класс для добавления собственных стилей заголовку блока*/
 h2.intro-header {
   margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-style: normal;
 }
 
 /*============== Стили подвала ====================*/
@@ -443,18 +418,21 @@ ul.social-list {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  width: 142px;
 }
 
 /*Элемент списка с иконкой*/
 li.social-list-item {
-  padding: 1px 13px;
+  padding: 0;
 }
 
 /*Иконки соцсетей*/
 ul.social-list svg {
   display: block;
+  padding: 1px 10px;
 }
 
 /*Красим иконки в голубой*/
@@ -488,6 +466,8 @@ a.contact-phone {
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 /*Параметры блока с номером телефона при наведении*/
@@ -496,7 +476,7 @@ a.contact-phone:hover {
 }
 
 /*Параметры блока с номером телефона при фокусе*/
-a.contact-phone:focus, a.contact-phone:focus-visible {
+a.contact-phone:focus {
   color: var(--main-brown-color);
   outline: none;
   outline-offset: 0;
@@ -510,7 +490,7 @@ a.contact-phone:active {
 
 /*Лого HTML Academy в покое*/
 .footer-html-academy-logo {
-  fill: #000;
+  fill: var(--main-black-color);
 }
 
 /*Лого HTML Academy при наведении и фокусе*/
@@ -594,10 +574,14 @@ li.advantages-list-item:last-child .advantages-text-block {
 
 /*Общие стили для заголовка блока*/
 h3.advantages-item-header {
-  color: var(--main-dark-color);
+  color: var(--main-black-color);
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto 30px auto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  font-style: normal;
 }
 
 /*Разделитель под заголовком блока*/
@@ -615,13 +599,13 @@ h3.advantages-item-header:after {
 /*Разделитель в блоке в первом и последнем эелементе*/
 .advantages-list-item:first-child h3.advantages-item-header:after,
 .advantages-list-item:last-child h3.advantages-item-header:after {
-  background-color: #ffffff;
+  background-color: var(--main-white-color);
 }
 
 /*Цвет заголовка в первом и последнем эелементе*/
 .advantages-list-item:first-child h3.advantages-item-header,
 .advantages-list-item:last-child h3.advantages-item-header {
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 /*Описание приемущества*/
@@ -630,12 +614,15 @@ p.advantages-item-description {
   text-align: center;
   font-size: 18px;
   margin: 0 auto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 /*Цвет текста описания в первом и последнем элементе*/
 .advantages-list-item:first-child p.advantages-item-description,
 .advantages-list-item:last-child p.advantages-item-description {
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 /*================ Блок "Советы посетителям" ==================*/
@@ -674,8 +661,13 @@ li.tips-list-item:last-child {
 
 /*Название приемущества*/
 h3.tips-name {
+  color: var(--main-black-color);
   text-transform: uppercase;
   margin: 0 auto 30px auto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  font-style: normal;
 }
 
 /*Общие стили иконки приемущества в виде псевдоэлемента*/
@@ -706,6 +698,9 @@ h3.tip-souvenir:before  {
 p.tips-description {
   font-size: 18px;
   margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 /*==================================*/
@@ -729,7 +724,7 @@ p.hotel-search-paragraph {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--main-white-color);
-  background-color: var(--main-black-color);
+  background-color: #879aa5;
 }
 
 /*Контейнер блока*/
@@ -750,38 +745,65 @@ h2.subscribe-block-title {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 20px 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-style: normal;
 }
 
-/*Текст блока*/
+/*Текст блока на главной*/
 p.subscribe-block-text {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
   margin: 0 auto 54px auto;
+  font-style: normal;
+  font-weight: 400;
 }
+
+/*Текст блока на странице каталога*/
+.subscribe-block-catalog-page p.subscribe-block-text {
+  color: var(--main-dark-color);
+}
+
 
 /*Поле ввода емейла*/
 label.input-email {
-  border-radius: 4px 0 0 4px;
+  display: flex;
   flex: 1 1 0;
   background-color: var(--main-gray-color);
+  border-radius: 4px 0 0 4px;
 }
 
 /*Поле ввода емейла*/
 label.input-email input {
-  outline: none;
   background: transparent;
-  opacity: 0.6;
-  font-weight: 400;
   box-sizing: border-box;
   width: 100%;
+  padding-inline: 0;
+  padding-block: 0;
+  font-family: inherit;
+  border: none;
+  color: var(--main-black-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 4px 0 0 4px;
 }
 
+/*Добавляем обводку полям воода при фокусе*/
+label.input-email input:focus, label.input-email input:focus-visible {
+  outline: var(--blue-outline);
+}
+
+
 /*Поле ввода емейла при фокусе*/
-label.input-email:focus-visible {
+label.input-email:focus, label.input-email:focus-visible {
   border-radius: 4px 0 0 4px;
   flex: 1 1 0;
-  outline: none;
+  outline: var(--blue-outline);
 }
 
 /*Кнопка подписаться*/
@@ -798,9 +820,7 @@ label.input-email:focus-visible {
   cursor: pointer;
 }
 
-/*==================================*/
-
-/*Стили каталога*/
+/*=============== Каталог и фильтры ===================*/
 
 /*Блок с фильтрами и карточками*/
 section.hotel-catalog {
@@ -820,7 +840,7 @@ ul.breadcrumbs {
   margin: 0 auto 40px 0;
   padding: 0;
   line-height: 21px;
-  color: #ffffff;
+  color: var(--main-white-color);
   font-size: 16px;
   font-weight: 400;
 }
@@ -861,15 +881,15 @@ li.breadcrumbs-item:before {
 
 /*Стилизуем название страницы с хлебных крошках*/
 a.breadcrumb-page-name {
-  color: #ffffff;
+  color: var(--main-white-color);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 /*Иконка-ссылка для возврата на стартовую страницу*/
 svg.start-page-button {
-  fill: #ffffff;
+  fill: var(--main-white-color);
 }
-
-/*==================================*/
 
 /*Контейнер блока с фильтрами*/
 .catalog-filter {
@@ -891,7 +911,7 @@ svg.start-page-button {
 
 /*Заголовок страницы "Каталог"*/
 h1.inner-page-title {
-  color: #ffffff;
+  color: var(--main-white-color);
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -912,7 +932,7 @@ form.filter-form fieldset:first-child {
 /*Название типа фильтра*/
 legend.hotel-catalog-filter-title {
   grid-column: 1 / -1;
-  color: #ffffff;
+  color: var(--main-white-color);
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -944,59 +964,91 @@ fieldset.sorting-for-price {
 
 fieldset.sorting-for-price label {
   display: flex;
+  position: relative;
   align-items: center;
+  background-color: var(--main-gray-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*Поле ввода минимальной цены*/
+label.price-from {
+  grid-column: 1 / 2;
+  border-radius: 4px 0 0 4px;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-right: 1px;
+}
+
+/*Поле ввода максимальной цены*/
+label.price-to {
+  grid-column: 2 / 3;
+  border-radius: 0 4px 4px 0;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-left: 1px;
+}
+
+/*Добавили подпись к input псевдоклассом*/
+label.price-from:after {
+  position: absolute;
+  right: 20px;
+  content: "от";
+  color: rgba(0, 0, 0, 0.3);
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*Добавили подпись к input псевдоклассом*/
+label.price-to:after {
+  position: absolute;
+  right: 20px;
+  content: "до";
+  color: rgba(0, 0, 0, 0.3);
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /*Стилизуем input внутри*/
 label.price-from input, label.price-to input {
   width: 100%;
   box-sizing: border-box;
-  padding: 0;
   background: transparent;
-}
-
-/*Стилизуем input внутри*/
-label.price-from input:focus-visible, label.price-to input:focus-visible {
-  outline: none;
-}
-
-/*Поля ввода цен при наведении*/
-label.price-from:hover, label.price-to:hover {
-  background-color: var(--second-gray-color);
-}
-
-/*Поля ввода цен при фокусе*/
-label.price-from:focus, label.price-to:focus {
-  background-color: var(--second-gray-color);
-  outline: var(--blue-outline);
-}
-
-/*Поле ввода минимальной цены*/
-.price-from {
-  grid-column: 1 / 2;
-  border-radius: 4px 0 0 4px;
-  color: rgba(0, 0, 0, 0.3);
-  text-align: right;
-  font-size: 18px;
-  margin-right: 1px;
-  font-weight: 400;
-  line-height: 24px;
-  padding: 12px 20px;
-  background-color: var(--main-gray-color);
-}
-
-/*Поле ввода максимальной цены*/
-.price-to {
-  grid-column: 2 / 3;
-  color: rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  background-color: transparent;
   border: none;
-  padding: 12px 20px;
-  border-radius: 0 4px 4px 0;
-  background: var(--main-gray-color);
-  margin-left: 1px;
+  color: var(--main-black-color);
   font-size: 18px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
   line-height: 24px;
+  padding: 12px 20px;
+}
+
+/*Границы поля ввода минимальной цены*/
+label.price-from input {
+  border-radius: 4px 0 0 4px;
+}
+
+/*Границы поля ввода максимальной цены*/
+label.price-to input {
+  border-radius: 0 4px 4px 0;
+}
+
+/*input при наведении*/
+label.price-from input:hover, label.price-to input:hover {
+  background-color: var(--second-gray-color);
+}
+
+/*input при фокусе*/
+label.price-from input:focus-visible, label.price-to input:focus-visible {
+  outline: var(--blue-outline);
+  background-color: var(--second-gray-color);
 }
 
 /*Блок со слайдером установки цены и полями ввода*/
@@ -1036,7 +1088,8 @@ label.price-from:focus, label.price-to:focus {
 .range-toggle {
   position: absolute;
   border: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background: transparent;
   top: 0;
   width: 20px;
@@ -1105,7 +1158,7 @@ button.button-reset:disabled {
 
 /*Стилизуем элементы списка*/
 li.catalog-filter-item {
-  color: #ffffff;
+  color: var(--main-white-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -1129,10 +1182,17 @@ li.catalog-filter-item input[type="checkbox" i] {
   height: 19px;
   margin: 0 16px 0 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: var(--main-white-color);
   border-radius: var(--common-border-radius);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   display: block;
+  font-family: inherit;
+  border: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 /*Стилизуем радиокнопки в блоке с фильтрами*/
@@ -1141,10 +1201,17 @@ li.catalog-filter-item input[type="radio" i] {
   height: 20px;
   margin: 0 16px 0 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: var(--main-white-color);
   border-radius: 50%;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   display: block;
+  font-family: inherit;
+  border: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 /*добавляем чекбокам галочку при выборе*/
@@ -1162,7 +1229,7 @@ li.catalog-filter-item input[type="radio" i]:checked {
 }
 
 /*добавляем чекбоксам и радиокнопкам рамку при фокусе*/
-li.catalog-filter-item:focus input[type="checkbox" i], li.catalog-filter-item:focus input[type="radio" i], li.catalog-filter-item:focus-visible input[type="checkbox" i], li.catalog-filter-item:focus-visible input[type="radio" i]  {
+li.catalog-filter-item input[type="checkbox"]:focus, li.catalog-filter-item input[type="radio"]:focus, li.catalog-filter-item input[type="checkbox"]:focus-visible, li.catalog-filter-item input[type="radio"]:focus-visible {
   outline: var(--blue-outline);
 }
 
@@ -1181,14 +1248,20 @@ li.catalog-filter-item:active {
 /*Блок с панелью сортировки и кнопками внешнего вида*/
 section.sorting-and-appearance {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 auto 40px auto;
 }
 
 /*Заголовок "Найдено гостиниц"*/
 h2.hotel-amount {
+  color: var(--main-black-color);
   text-transform: uppercase;
   margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-style: normal;
 }
 
 /*Стили пунктов меню сортировки*/
@@ -1201,14 +1274,15 @@ select.sort-by-price {
   border-radius: var(--common-border-radius);
   border: none;
   outline: 2px solid #e5e5e5;
-  padding: 10px 20px;
+  padding: 14px 20px;
   box-sizing: border-box;
   margin: 0 70px 0 auto;
   font-family: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url(../images/arrow.svg);
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 15px center;
 }
 
 select.sort-by-price option {
@@ -1229,14 +1303,17 @@ select.sort-by-price:disabled {
 /*Панель с кнопками смены внешнего вида каталога*/
 .appearance-change-button {
   margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*Общие стили кнопки смены внешнего вида*/
-button.button-appearance-change {
+.button-appearance-change {
   width: 48px;
   height: 48px;
   border-radius: var(--common-border-radius);
-  padding: 14px 12px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   border: 2px solid #e5e5e5;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -1244,19 +1321,19 @@ button.button-appearance-change {
   cursor: pointer;
 }
 
-/*Добавляем внешние отсупы второй (средней) кнопке*/
-button.button-appearance-change:nth-child(2) {
-  margin: 0 4px;
+/*Общие стили кнопки смены внешнего вида*/
+.button-appearance-change:not(.button-appearance-change:last-child) {
+  margin-right: 8px;
 }
 
 /*Меняем выделение кнопки смены внешнего вида при наведении и у активной*/
-button.button-appearance-change:hover, button.button-appearance-change:active {
-  border-color: var(--main-black-color);
+.button-appearance-change:hover, .button-appearance-change:active {
+  border: 2px solid var(--main-black-color);
 }
 
 /*Меняем выделение кнопки смены внешнего вида при фокусах*/
-button.button-appearance-change:focus, button.button-appearance-change:focus-visible{
-  border-color: var(--button-blue-second-color);
+.button-appearance-change:focus, .button-appearance-change:focus-visible {
+  border: 2px solid var(--button-blue-second-color);
   outline: none;
 }
 
@@ -1306,6 +1383,7 @@ li.hotel-card-list-item {
 a.hotel-card-link {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 /*Делаем картинку равной ширине карточки товара*/
@@ -1317,8 +1395,12 @@ img.hotel-card-image {
 
 /*Название отеля*/
 h3.hotel-name {
-  color: var(--main-dark-color);
+  color: var(--main-black-color);
   margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  font-style: normal;
 }
 
 /*Контейнер для типа гостиницы и цены*/
@@ -1337,6 +1419,9 @@ p.hotel-type {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 /*минимальная цена гостиницы*/
@@ -1346,6 +1431,9 @@ p.minimal-price {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 /*Рейтинг отеля по количеству звезд*/
@@ -1378,11 +1466,12 @@ p.rating-text {
   text-transform: uppercase;
   padding: 9px 0;
   margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-/*==================================*/
-
-/*Кнопки пагинации*/
+/*================ Кнопки пагинации ==================*/
 
 /*Блок с пагинацией*/
 section.pagination {
@@ -1392,6 +1481,7 @@ section.pagination {
 /*Контейнер-список для кнопок*/
 ul.catalog-pagination {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1429,12 +1519,12 @@ li.pagination-item:last-child {
   line-height: 20px;
   text-transform: uppercase;
   white-space: nowrap;
+  text-decoration: none;
   cursor: pointer;
 }
 
-
 /*Кнопка номера страницы при наведении и фокусе*/
-.pagination-button:hover, .pagination-button:focus {
+.pagination-button:hover, .pagination-button:focus, .pagination-button:focus-visible {
   background-color: var(--button-blue-second-color);
   outline: 1px solid var(--button-blue-main-color);
 }
@@ -1458,7 +1548,7 @@ li.pagination-item:last-child {
 
 /*"Кнопка-точка"*/
 .pagination-dots, .pagination-dots:active, .pagination-dots:hover, .pagination-dots:focus {
-  background: #ffffff;
+  background: var(--main-white-color);
   color: var(--main-black-color);
   margin: 0 4px;
   font-size: 22px;
@@ -1506,7 +1596,7 @@ button.modal-window-close {
   border-radius: 50%;
   position: absolute;
   top: 64px;
-  right: 49px;
+  right: 52px;
   border: none;
   padding-inline: 0;
   background-repeat: no-repeat;
@@ -1516,12 +1606,12 @@ button.modal-window-close {
 
 /*Красим иконку крестик в кнопке закрытия*/
 button.modal-window-close svg.window-close-ico {
-  fill: #000;
+  fill: var(--main-black-color);
 }
 
 /*Красим иконку крестик в кнопке закрытия*/
 button.modal-window-close:active svg.window-close-ico {
-  fill: #000;
+  fill: var(--main-black-color);
   opacity: 0.3;
 }
 
@@ -1547,13 +1637,17 @@ h2.form-title {
   text-transform: uppercase;
   text-align: left;
   margin: 0 0 64px 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  font-style: normal;
 }
 
 /*Блок формы*/
 .hotel-search-form {
   display: grid;
   grid-template-columns: min-content 110px auto auto 110px;
-  row-gap: 48px;
+  grid-template-rows: 48px minmax(48px, auto) 48px minmax(48px, auto) 48px 48px auto;
   align-items: center;
   position: relative;
 }
@@ -1567,20 +1661,24 @@ label.arrival-date {
 /*Дата отъезда*/
 label.departure-date {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 /*Количество взрослых*/
 label.adults-amount {
   grid-column: 1 / 2;
+  grid-row: 5 / 6;
   margin-right: 46px;
 }
 
 /*Количество детей*/
 label.kids-amount {
   grid-column: 4 / 5;
-  grid-row: 3 / 4;
+  grid-row: 5 / 6;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 46px;
 }
 
 /*Стилизуем лэйблы в модальном окне*/
@@ -1600,6 +1698,8 @@ button.find-hotel {
   border-radius: 10px;
   padding: 18px 0;
   font-size: 20px;
+  line-height: 24px;
+  grid-row: 7 / 8;
 }
 
 /*Стилизуем все input в форме*/
@@ -1621,11 +1721,17 @@ button.find-hotel {
 /*Растягиваем input с датами на нужную ширину*/
 input.arrival-date-value, input.departure-date-value {
   grid-column: 2 / 6;
+  grid-row: 1 / 2;
+}
+
+input.departure-date-value {
+  grid-column: 2 / 6;
+  grid-row: 3 / 4;
 }
 
 /*Заменяем иконку календаря*/
 .hotel-search-form input[type="date"]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
+  color: var(--main-black-color);
   opacity: 0.3;
   display: block;
   background: url(../images/calendar.svg) no-repeat;
@@ -1638,16 +1744,35 @@ input.arrival-date-value, input.departure-date-value {
 /*input ввода даты прибытия*/
 .arrival-date-value {
   grid-row: 1 / 2;
+  font-family: inherit;
+  background-color: var(--main-gray-color);
+  padding: 12px 20px;
+  border: none;
+  color: var(--main-black-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 /*input ввода даты отъезда*/
 .departure-date-value {
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
+  font-family: inherit;
+  background-color: var(--main-gray-color);
+  padding: 12px 20px;
+  border: none;
+  color: var(--main-black-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 /*Блок с вводом количества взрослых*/
 .adult-quantity_inner {
   grid-column: 2 / 3;
+  grid-row: 5 / 6;
   display: flex;
   background-color: var(--main-gray-color);
   border-radius: var(--common-border-radius);
@@ -1656,6 +1781,7 @@ input.arrival-date-value, input.departure-date-value {
 /*Блок с вводом количества детей*/
 .kids-quantity_inner {
   grid-column: 5 / 6;
+  grid-row: 5 / 6;
   display: flex;
   background-color: var(--main-gray-color);
   border-radius: var(--common-border-radius);
@@ -1668,6 +1794,19 @@ input.arrival-date-value, input.departure-date-value {
   text-align: center;
   padding: 14px 10px;
   box-sizing: border-box;
+  font-family: inherit;
+  background-color: var(--main-gray-color);
+  border: none;
+  color: var(--main-black-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/*Добавляем выделение input ввода людей при фокусе*/
+.adult-quantity_inner input:focus, .adult-quantity_inner input:focus-visible .kids-quantity_inner input:focus, .kids-quantity_inner input:focus-visible {
+  outline: var(--blue-outline);
 }
 
 /*Стилизуем кнопки плюс-минус в форме*/
@@ -1675,7 +1814,8 @@ input.arrival-date-value, input.departure-date-value {
   display: flex;
   align-items: center;
   border: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-color: transparent;
   padding: 14px 10px;
   box-sizing: border-box;
@@ -1691,27 +1831,26 @@ input.arrival-date-value, input.departure-date-value {
 
 /*Красим иконки плюс-минус при наведении*/
 .bt_minus:hover svg, .bt_plus:hover svg {
-  fill: #000;
+  fill: var(--main-black-color);
 }
 
 /*Красим иконки плюс-минус при наведении*/
 .bt_minus:focus svg, .bt_plus:focus svg {
-  fill: #000;
-  outline: 3px solid #82B3D3;
+  fill: var(--main-black-color);
+  outline: 3px solid var(--button-blue-main-color);
   border-radius: 4px;
 }
 
 /*Красим иконки плюс-минус при наведении*/
 .bt_minus:active svg, .bt_plus:active svg {
-  fill: #000;
+  fill: var(--main-black-color);
   opacity: 0.1;
 }
 
 /*Иконка подсказки*/
 .tooltip-toogle {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   border: none;
   width: 26px;
   height: 26px;
@@ -1723,7 +1862,6 @@ input.arrival-date-value, input.departure-date-value {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: center;
   position: relative;
 }
 
@@ -1750,7 +1888,7 @@ input.arrival-date-value, input.departure-date-value {
   top: 43px;
 }
 
-/*Треугольник*/
+/*Треугольник, указывающий, откуда появилась подсказка*/
 .tooltip-toogle .tooltiptext:after {
   content: "";
   position: absolute;
@@ -1767,26 +1905,29 @@ input.arrival-date-value, input.departure-date-value {
   visibility: visible;
 }
 
-/*Красный текст сообщения об ошибке*/
+/*Черный текст сообщения об ошибке*/
 p.error-message {
-  position: absolute;
-  padding: 0 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 4px 20px;
   margin-block: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  min-height: 48px;
 }
 
 /*Красный текст сообщения об ошибке*/
 .message-red {
   color: #FF5757;
   grid-column: 2 / 6;
-  grid-row: 1 / 2;
-  bottom: -25px;
+  grid-row: 2 / 3;
 }
 
 /*Черный текст сообщения об ошибке*/
 p.message-black {
   color: var(--main-dark-color);
-  position: absolute;
   grid-column: 2 / 6;
-  grid-row: 2 / 3;
-  bottom: -25px;
+  grid-row: 4 / 5;
 }

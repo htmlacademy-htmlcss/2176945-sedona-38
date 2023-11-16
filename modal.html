@@ -8,8 +8,8 @@
       content="Мой первый сайт-проект в рамках курса 'HTML и CSS. Профессиональная вёрстка сайтов'">
     <title>Страница с модальным окном в личном проекте «Седона»</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./favicon.png">
   </head>
 
   <body>
@@ -45,13 +45,14 @@
               </svg>
             </button>
           </div>
-          <label class="kids-amount" for="kids-quantity">Дети:</label>
-          <div class="tooltip-toogle" aria-labelledby="tooltip-label-date">
+          <label class="kids-amount" for="kids-quantity">Дети:
+            <div class="tooltip-toogle" aria-labelledby="tooltip-label-date">
             <svg xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
             </svg>
             <div class="tooltiptext" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</div>
           </div>
+          </label>
           <div class="kids-quantity_inner">
             <button class="bt_minus" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2" viewBox="0 0 15 2">
@@ -65,7 +66,7 @@
               </svg>
             </button>
           </div>
-          <button class="button button-blue find-hotel" type="button">найти</button>
+          <button class="button button-blue find-hotel" type="submit">найти</button>
         </form>
       </div>
     </div>
