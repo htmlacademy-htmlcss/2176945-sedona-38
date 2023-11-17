@@ -18,7 +18,6 @@
   src: url(../fonts/ptsans-700.woff2) format(woff2);
 }
 
-
 /*Переменные*/
 :root {
   --white-opacity: rgba(255, 255, 255, 0.3); /*Белый цвет с прозрачностью 30%*/
@@ -31,7 +30,7 @@
   --button-green-color: #7DB54F; /*Цвет зеленой кнопки*/
   --button-blue-main-color: #82B3D3; /*Цвет голубой кнопки основной*/
   --button-blue-second-color: #68A2CA; /*Цвет голубой кнопки дополнительный*/
-  --blue-outline: 3px solid #83B3D3; /*Выделение элементов при фокусе*/
+  --blue-outline-сolor: #83B3D3; /*Выделение элементов при фокусе*/
 }
 
 html {
@@ -794,7 +793,7 @@ label.input-email input {
 
 /*Добавляем обводку полям воода при фокусе*/
 label.input-email input:focus, label.input-email input:focus-visible {
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 
@@ -802,7 +801,7 @@ label.input-email input:focus, label.input-email input:focus-visible {
 label.input-email:focus, label.input-email:focus-visible {
   border-radius: 4px 0 0 4px;
   flex: 1 1 0;
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /*Кнопка подписаться*/
@@ -1046,7 +1045,7 @@ label.price-from input:hover, label.price-to input:hover {
 
 /*input при фокусе*/
 label.price-from input:focus-visible, label.price-to input:focus-visible {
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
   background-color: var(--second-gray-color);
 }
 
@@ -1127,7 +1126,7 @@ button.button-reset:hover {
 /*Кнопка сброса фильтров при фокусе*/
 button.button-reset:focus, button.button-reset:focus-visible {
   border-radius: 4px;
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /*Кнопка сброса фильтров при фокусе*/
@@ -1229,7 +1228,7 @@ li.catalog-filter-item input[type="radio" i]:checked {
 
 /*добавляем чекбоксам и радиокнопкам рамку при фокусе*/
 li.catalog-filter-item input[type="checkbox"]:focus, li.catalog-filter-item input[type="radio"]:focus, li.catalog-filter-item input[type="checkbox"]:focus-visible, li.catalog-filter-item input[type="radio"]:focus-visible {
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /**/
@@ -1623,7 +1622,7 @@ button.modal-window-close:hover {
 /*Кнопка закрытия модального окна при фокусе*/
 button.modal-window-close:focus, button.modal-window-close:focus-visible {
   background-color: var(--second-gray-color);
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /*Кнопка закрытия модального окна при нажатии*/
@@ -1715,7 +1714,7 @@ button.find-hotel {
 /*input ввода даты при фокус*/
 .hotel-search-form input[type="date"]:focus, .hotel-search-form input[type="date"]:focus-visible {
   background-color: var(--second-gray-color);
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /*Заменяем иконку календаря*/
@@ -1797,7 +1796,7 @@ button.find-hotel {
 
 /*Добавляем выделение input ввода людей при фокусе*/
 .adult-quantity_inner input:focus, .adult-quantity_inner input:focus-visible .kids-quantity_inner input:focus, .kids-quantity_inner input:focus-visible {
-  outline: var(--blue-outline);
+  outline: 3px solid var(--blue-outline-сolor);
 }
 
 /*Стилизуем кнопки плюс-минус в форме*/
