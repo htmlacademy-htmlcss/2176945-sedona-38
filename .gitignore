@@ -5,6 +5,10 @@
 *.pdf
 *.psd
 *.sublime*
+Amara-Resort-Spa-resize.jpg
+Desert-Quail-Inn-resize.jpg
+GreenTree-Inn-resize.jpg
+Villas-at-Poco-Diablo-resize.jpg
 node_modules/
 npm-debug.*
 Thumbs.db

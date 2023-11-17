@@ -21,7 +21,6 @@
 
 /*Переменные*/
 :root {
-  --common-border-radius: 4px; /*Основой радиус скругления границ элементов сайта*/
   --white-opacity: rgba(255, 255, 255, 0.3); /*Белый цвет с прозрачностью 30%*/
   --main-black-color: #000; /*Основной черный цвет для элементов*/
   --main-dark-color: #333; /*Темный цвет для элементов*/
@@ -148,7 +147,7 @@ button {
 /*Коричневая кнопка*/
 .button-brown {
   background-color: var(--main-brown-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Коричневая кнопка при наведении и фокусе*/
@@ -159,19 +158,19 @@ button {
 /*Зеленая кнопка*/
 .button-green {
   background-color: var(--button-green-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Зеленая кнопка при наведении и фокусе*/
 .button-green:hover, .button-green:focus {
   background-color: #6C9E42;
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Голубая кнопка*/
 .button-blue {
   background-color: var(--button-blue-main-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Голубая кнопка при наведении и фокусе*/
@@ -587,7 +586,7 @@ h3.advantages-item-header {
 /*Разделитель под заголовком блока*/
 h3.advantages-item-header:after {
   display: block;
-  content: '';
+  content: "";
   width: 60px;
   height: 2px;
   border: none;
@@ -672,7 +671,7 @@ h3.tips-name {
 
 /*Общие стили иконки приемущества в виде псевдоэлемента*/
 h3.tips-name:before {
-  content: '';
+  content: "";
   display: block;
   width: 75px;
   height: 75px;
@@ -1127,7 +1126,7 @@ button.button-reset:hover {
 
 /*Кнопка сброса фильтров при фокусе*/
 button.button-reset:focus, button.button-reset:focus-visible {
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   outline: var(--blue-outline);
 }
 
@@ -1183,7 +1182,7 @@ li.catalog-filter-item input[type="checkbox" i] {
   margin: 0 16px 0 0;
   padding: 0;
   background-color: var(--main-white-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   -webkit-appearance: none;
           appearance: none;
   display: block;
@@ -1271,7 +1270,7 @@ select.sort-by-price {
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   border: none;
   outline: 2px solid #e5e5e5;
   padding: 14px 20px;
@@ -1311,9 +1310,10 @@ select.sort-by-price:disabled {
 .button-appearance-change {
   width: 48px;
   height: 48px;
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   border: 2px solid #e5e5e5;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -1371,7 +1371,7 @@ ul.hotel-card-list {
 /*Карточка гостиницы в общем списке*/
 li.hotel-card-list-item {
   display: block;
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   border: 1px solid var(--second-gray-color);
   padding: 20px;
   box-sizing: border-box;
@@ -1458,7 +1458,7 @@ p.minimal-price {
 
 /*Текст и значение рейтинга*/
 p.rating-text {
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   background-color: var(--main-gray-color);
   text-align: center;
   color: var(--main-dark-color);
@@ -1506,7 +1506,7 @@ li.pagination-item:last-child {
 .pagination-button {
   padding: 12px;
   background-color: var(--button-blue-main-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   width: 36px;
   height: 36px;
   display: flex;
@@ -1539,7 +1539,7 @@ li.pagination-item:last-child {
   padding: 12px;
   background-color: var(--main-gray-color);
   color: var(--main-black-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -1704,7 +1704,7 @@ button.find-hotel {
 
 /*Стилизуем все input в форме*/
 .hotel-search-form input {
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*input ввода даты при наведении*/
@@ -1716,17 +1716,6 @@ button.find-hotel {
 .hotel-search-form input[type="date"]:focus, .hotel-search-form input[type="date"]:focus-visible {
   background-color: var(--second-gray-color);
   outline: var(--blue-outline);
-}
-
-/*Растягиваем input с датами на нужную ширину*/
-input.arrival-date-value, input.departure-date-value {
-  grid-column: 2 / 6;
-  grid-row: 1 / 2;
-}
-
-input.departure-date-value {
-  grid-column: 2 / 6;
-  grid-row: 3 / 4;
 }
 
 /*Заменяем иконку календаря*/
@@ -1743,6 +1732,7 @@ input.departure-date-value {
 
 /*input ввода даты прибытия*/
 .arrival-date-value {
+  grid-column: 2 / 6;
   grid-row: 1 / 2;
   font-family: inherit;
   background-color: var(--main-gray-color);
@@ -1757,6 +1747,7 @@ input.departure-date-value {
 
 /*input ввода даты отъезда*/
 .departure-date-value {
+  grid-column: 2 / 6;
   grid-row: 3 / 4;
   font-family: inherit;
   background-color: var(--main-gray-color);
@@ -1775,7 +1766,7 @@ input.departure-date-value {
   grid-row: 5 / 6;
   display: flex;
   background-color: var(--main-gray-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Блок с вводом количества детей*/
@@ -1784,7 +1775,7 @@ input.departure-date-value {
   grid-row: 5 / 6;
   display: flex;
   background-color: var(--main-gray-color);
-  border-radius: var(--common-border-radius);
+  border-radius: 4px;
 }
 
 /*Стили input для ввода числа людей для подбора отеля*/
@@ -1909,6 +1900,7 @@ input.departure-date-value {
 p.error-message {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   padding: 4px 20px;
   margin-block: 0;
   font-size: 16px;
