@@ -3,9 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Мой первый сайт-проект в рамках курса 'HTML и CSS. Профессиональная вёрстка сайтов'">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Мой первый сайт-проект в рамках курса «HTML и CSS. Профессиональная вёрстка сайтов»">
     <title>Личный проект «Седона»</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="./favicon.ico">
@@ -13,7 +12,6 @@
   </head>
 
   <body>
-    <div class="page-wrapper">
       <!--Шапка-->
       <header class="sedona-header" data-test="header">
         <a href="index.html">
@@ -53,7 +51,7 @@
         </nav>
       </header>
       <!--Основной контент-->
-      <main class="index-page-main" data-test="main">
+      <main class="index-page-main page-wrapper " data-test="main">
         <h1 class="visually-hidden">Прекрасный городок Седона.</h1>
         <!--Баннер на главной-->
         <section class="site-banner" data-test="hero">
@@ -77,7 +75,7 @@
                 <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages-list-item-image" src="images/sedona-typical-house.jpg"
-                alt="Типичный для городка Седона домик">
+                alt="Типичный для городка Седона домик" width="800" height="385">
             </li>
             <li class="advantages-list-item">
               <div class="advantages-text-block">
@@ -102,7 +100,7 @@
                 <h3 class="advantages-item-header">Там есть<br>мост дьявола</h3>
                 <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
-              <img class="advantages-list-item-image" src="images/sedona-devils-canyon.jpg" alt="Мост Дьявола">
+              <img class="advantages-list-item-image" src="images/sedona-devils-canyon.jpg" alt="Мост Дьявола" width="800" height="385">
             </li>
           </ul>
         </section>
@@ -234,7 +232,6 @@
           </a>
         </section>
       </footer>
-    </div>
   </body>
 
 </html>
