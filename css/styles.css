@@ -37,15 +37,6 @@ html {
   height: 100%;
 }
 
-/*Обертка для страниц сайта*/
-.page-wrapper {
-  background-color: var(--main-white-color);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  flex-grow: 1;
-}
-
 /*Объявляем базовые стили у всех блоков*/
 body {
   display: flex;
@@ -58,6 +49,15 @@ body {
   background-color: var(--main-gray-color);
   font-size: 16px;
   line-height: 24px;
+}
+
+/*Обертка для страниц сайта для паттерна sticky footer*/
+.page-wrapper {
+  background-color: var(--main-white-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  flex-grow: 1;
 }
 
 /*Скрываем невидимые элементы*/
@@ -111,7 +111,7 @@ p.standart-text-block-text {
 
 /*=============== КНОПКИ ================*/
 
-/*Общие стили для всех кнопок*/
+/*Общие стили для всех кнопок - ссылок*/
 .button {
   padding: 8px 0;
   display: flex;
@@ -130,16 +130,13 @@ p.standart-text-block-text {
   width: min-content;
 }
 
-button {
-  cursor: pointer;
-  width: min-content;
-}
-
-.button:active, button:active {
+/*Задаем цвет текста обычным кнопкам при нажатии*/
+.button:active {
   color: var(--white-opacity);
 }
 
-.button:disabled, button:disabled {
+/*Задаем фон обычным кнопкам при неактивности*/
+.button:disabled {
   background-color: #E5E5E5;
 }
 
@@ -274,6 +271,8 @@ header.sedona-header {
   grid-template-columns: 140px auto auto;
   align-content: center;
   align-items: center;
+  background-color: var(--main-white-color);
+  width: 1200px;
 }
 
 /*Cписок пунктов меню шапки*/
@@ -322,12 +321,6 @@ li.navigation-button-item {
 li.navigation-item {
   margin: 0 16px;
 }
-
-/*Элемент списка при наведении
-.header-navigation li.navigation-item:hover {
-  border-bottom: 2px solid #756257;
-}
-*/
 
 /*Пункты меню шапки*/
 a.nav-link {
@@ -400,7 +393,7 @@ h2.intro-header {
 /*============== Стили подвала ====================*/
 
 /*Контейнер подвала*/
-footer {
+footer.sedona-footer {
   padding: 40px 70px 30px 70px;
   box-sizing: border-box;
   display: grid;
@@ -408,6 +401,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  background-color: var(--main-white-color);
+  width: 1200px;
 }
 
 /*Список ссылок на социальные сети*/
@@ -806,7 +801,6 @@ label.input-email:focus, label.input-email:focus-visible {
 
 /*Кнопка подписаться*/
 .subscribe-button {
-
   border: none;
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
@@ -1597,10 +1591,6 @@ button.modal-window-close {
   top: 64px;
   right: 52px;
   border: none;
-  padding-inline: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-block: 0;
 }
 
 /*Красим иконку крестик в кнопке закрытия*/
@@ -1627,6 +1617,11 @@ button.modal-window-close:focus, button.modal-window-close:focus-visible {
 
 /*Кнопка закрытия модального окна при нажатии*/
 button.modal-window-close:active {
+  background-color: var(--second-gray-color);
+}
+
+/*Кнопка закрытия модального окна при нажатии*/
+button.modal-window-close:disabled {
   background-color: var(--second-gray-color);
 }
 
@@ -1676,7 +1671,7 @@ label.kids-amount {
   grid-row: 5 / 6;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-right: 46px;
 }
 
@@ -1795,7 +1790,7 @@ button.find-hotel {
 }
 
 /*Добавляем выделение input ввода людей при фокусе*/
-.adult-quantity_inner input:focus, .adult-quantity_inner input:focus-visible .kids-quantity_inner input:focus, .kids-quantity_inner input:focus-visible {
+.adult-quantity_inner input:focus, .adult-quantity_inner input:focus-visible, .kids-quantity_inner input:focus, .kids-quantity_inner input:focus-visible {
   outline: 3px solid var(--blue-outline-сolor);
 }
 
@@ -1839,6 +1834,8 @@ button.find-hotel {
 
 /*Иконка подсказки*/
 .tooltip-toogle {
+  grid-column: 4 / 5;
+    grid-row: 5 / 6;
   -webkit-appearance: none;
           appearance: none;
   border: none;
@@ -1848,11 +1845,12 @@ button.find-hotel {
   background: var(--button-blue-main-color);
   background-position: center center;
   background-repeat: no-repeat;
-  margin-left: 10px;
+  margin: 0 46px 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  justify-self: flex-end;
 }
 
 /*Блок с подсказкой*/

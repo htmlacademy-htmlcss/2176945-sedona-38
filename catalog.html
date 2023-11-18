@@ -4,8 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Мой первый сайт-проект в рамках курса 'HTML и CSS. Профессиональная вёрстка сайтов'">
+    <meta name="description" content="Мой первый сайт-проект в рамках курса «HTML и CSS. Профессиональная вёрстка сайтов»">
     <title>Каталог гостиниц</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="./favicon.ico">
@@ -13,7 +12,6 @@
   </head>
 
   <body>
-    <div class="page-wrapper">
       <!--Шапка-->
       <header class="sedona-header" data-test="header">
         <a href="index.html">
@@ -54,7 +52,7 @@
         </nav>
       </header>
       <!--Основной контент-->
-      <main class="inner-content" data-test="main">
+      <main class="inner-content page-wrapper" data-test="main">
         <div class="catalog-filter">
           <header class="catalog-header">
             <h1 class="inner-page-title">Гостиницы Седоны</h1>
@@ -63,11 +61,9 @@
               <li class="start-page-button">
                 <a href="index.html">
                   <span class="visually-hidden">Вернуться на главную страницу.</span>
-                  <svg class="start-page-button" role="img" width="13" height="12" viewBox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  <svg class="start-page-button" role="img" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
-                      <path
-                        d="M6.39282 0L0.392822 5.80006V12.0001H12.3928V5.80006L6.39282 0ZM11.3928 11.0001H1.39282V6.20005L6.39282 1.4L11.3928 6.20005V11.0001Z" />
+                      <path d="M6.39282 0L0.392822 5.80006V12.0001H12.3928V5.80006L6.39282 0ZM11.3928 11.0001H1.39282V6.20005L6.39282 1.4L11.3928 6.20005V11.0001Z" />
                       <path d="M4.39282 10.0001H5.39282V7.50005H7.39282V10.0001H8.39282V6.50005H4.39282V10.0001Z" />
                     </g>
                   </svg>
@@ -182,7 +178,7 @@
             <ul class="hotel-card-list">
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/amara-resort-spa-resize.jpg" alt="Amara Resort & Spa" width="300" height="210">
+                  <img class="hotel-card-image" src="images/amara-resort-and-spa.jpg" alt="Amara Resort & Spa" width="300" height="210">
                   <h3 class="hotel-name">Amara Resort & Spa</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -201,7 +197,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/villas-at-poco-diablo-resize.jpg" alt="Villas at Poco Diablo" width="300" height="210">
+                  <img class="hotel-card-image" src="images/villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo" width="300" height="210">
                   <h3 class="hotel-name">Villas at Poco Diablo</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -220,7 +216,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/desert-quail-inn-resize.jpg" alt="Desert Quail Inn" width="300" height="210">
+                  <img class="hotel-card-image" src="images/desert-quail-inn.jpg" alt="Desert Quail Inn" width="300" height="210">
                   <h3 class="hotel-name">Desert Quail Inn</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -238,7 +234,7 @@
               </li>
               <li class="hotel-card-list-item">
                 <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/greentree-inn-resize.jpg" alt="GreenTree Inn" width="300" height="210">
+                  <img class="hotel-card-image" src="images/green-tree-inn.jpg" alt="GreenTree Inn" width="300" height="210">
                   <h3 class="hotel-name">GreenTree Inn</h3>
                 </a>
                 <div class="hotel-info-wrapper">
@@ -381,6 +377,4 @@
           </a>
         </section>
       </footer>
-      <!--Модальное окно-->
-    </div>
   </body>
