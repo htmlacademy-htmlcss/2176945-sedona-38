@@ -891,7 +891,7 @@ svg.start-page-button {
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--main-dark-color);
+  background-color: #296695;
 }
 
 /*Приводим к нужной ширине хедер в фильтре и блок с фильтрами*/
